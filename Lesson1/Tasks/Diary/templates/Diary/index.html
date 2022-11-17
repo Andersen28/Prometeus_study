@@ -1,0 +1,11 @@
+{% extends "Diary/layout.html" %}
+{% block body %}
+<h1>Список завдань</h1>
+<a href="{% url 'Diary:add' %}">Додати завдання до списку</a>
+<ul>
+    {% for task in tasks%}
+    <li>{{ task }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock  %}

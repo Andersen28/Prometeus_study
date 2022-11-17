@@ -1,0 +1,10 @@
+{% extends "Diary/layout.html" %}
+{% block body %}
+<h1>Додати завдання</h1>
+<form action="{% url 'Diary:add' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit">
+</form>
+<a href="{% url 'Diary:index' %}"> Переглянути список завдань</a>
+{% endblock  %}
